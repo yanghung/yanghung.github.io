@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Yang Hung</title>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href="../css/stylesheet.css" rel="stylesheet">
+    <style type="text/css">
+      .select_maps option:first-child,.select_metric option:first-child,.select_period option:first-child
+        {display:none;}
+
+      .select_maps, .select_metric, .select_period {
+        margin-right: 25px;
+        background: url(../img/black_down_triangle.png) no-repeat right #e0e0e0;
+      }
+
+      select {
+         background: transparent;
+         width: 200px;
+         font-size: 13px;
+         border: 1px solid #7F9DB9;
+         border-radius: 4px;         
+         -webkit-appearance: none;
+         -moz-appearance:none;
+         appearance:none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header_left">
+        <h1>YANG HUNG</h1>
+        <h2>My goal is to <span style="color:#238E23">democratize data</span> for all to enjoy</h2>
+      </div><!--header_left-->
+
+      <div class="header_right">
+        <ul class="nav">
+          <li>
+            <a href="http://www.linkedin.com/in/yanghung" target="_blank">
+              <img src="../img/icon-linkedin.png" alt="LinkedIn">
+              <div class="transition-icon"></div>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:yanghung@gmail.com?Subject=Hi%20Yang%20Hung">
+              <img src="../img/icon-email.png" alt="email">
+              <div class="transition-icon"></div>
+            </a>
+          </li>
+          <li>
+            <a href="../assets/Yang_Hung_Resume.pdf" target="_blank">
+              <img src="../img/icon-resume.png" alt="Resume">
+              <div class="transition-icon"></div>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.yanghung.com">
+              <img src="../img/icon-home.png" alt="Home">
+              <div class="transition-icon"></div>
+            </a>
+          </li>
+        </ul>
+      </div><!--header_right-->
+
+      <p>Using population data from the <a href="http://data.worldbank.org/indicator/SP.POP.TOTL" target="_blank"> World Bank</a> and audience reach figures from <a href="https://www.facebook.com/ads/create/" target="_blank">Facebook</a> , the following dashboard maps out the distribution of Facebook users throughout the world. <br><br>By selecting different map views, metrics, and time periods, a <a href="http://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth map</a> will be generated.<br><br>Tools used: JavaScript</p>
+      <p><br></p>
+
+      <select class="select_maps">
+        <option value="">Choose a Map</option> 
+        <option value="world">Worldwide</option> 
+        <option value="europe">Europe</option> 
+        <option value="middleeast">Middle East</option> 
+        <option value="africa">Africa</option> 
+        <option value="southamerica">South America</option> 
+        <option value="asia">Asia</option> 
+        <option value="southeastasia">Southeast Asia</option> 
+      </select>
+      
+      <select class="select_metric">
+        <option value="">Choose a Metric</option> 
+        <option value="mau"># Active Users</option> 
+        <option value="pct_growth">% Growth</option> 
+        <option value="pct_pen_pop">% Penetration</option> 
+      </select>
+      
+      <select class="select_period">
+        <option value="">Choose a Time Period</option>
+        <option value="mo_0">Current</option>
+        <option value="mo_1">1 Month Ago</option>
+        <option value="mo_3">3 Months Ago</option>
+        <option value="mo_6">6 Months Ago</option>
+        <option value="mo_12">12 Months Ago</option>
+      </select>
+      
+      <div class="project-container">
+        <div class="svg_holder" style="height: 540px; width: 820px; padding: 0px 0px;"></div>
+        <div class="legend_holder" style="height: 50px; width: 820px"></div>
+      </div><!--project-container-->
+
+
+    </div><!--container-->
+
+    <footer>
+      <div class="container">
+        <p>&copy; www.yanghung.com 2014</p>
+      </div>
+    </footer>
+
+	<script src="../js/d3.v3.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/datamaps-all.js"></script> <!--contains datamaps library-->
+  <script src="country_data.js"></script> <!--contains country level data-->
+	<script src="datamap.js"></script> <!--contains script to generate map-->
+
+
+
+<script type="text/javascript"> 
+  genDatamap(".svg_holder",'', 'world', ''); //generate blank map by default
+
+  var country_hist = {};
+  for (var i in country_historical){
+    country_hist[country_historical[i].ID]=country_historical[i];
+    country_hist[country_historical[i].ID].users_0mo_ago_s = numberWithCommas(country_hist[country_historical[i].ID].users_0mo_ago);
+    country_hist[country_historical[i].ID].users_1mo_ago_s = numberWithCommas(country_hist[country_historical[i].ID].users_1mo_ago);
+    country_hist[country_historical[i].ID].users_3mo_ago_s = numberWithCommas(country_hist[country_historical[i].ID].users_3mo_ago);
+    country_hist[country_historical[i].ID].users_6mo_ago_s = numberWithCommas(country_hist[country_historical[i].ID].users_6mo_ago);
+    country_hist[country_historical[i].ID].users_12mo_ago_s = numberWithCommas(country_hist[country_historical[i].ID].users_12mo_ago);
+    
+    country_hist[country_historical[i].ID].growth_1mo_ago = 
+      ((country_hist[country_historical[i].ID].users_0mo_ago-country_hist[country_historical[i].ID].users_1mo_ago) /
+                                  country_hist[country_historical[i].ID].users_0mo_ago);
+    country_hist[country_historical[i].ID].growth_3mo_ago = 
+      ((country_hist[country_historical[i].ID].users_0mo_ago-country_hist[country_historical[i].ID].users_3mo_ago) /
+                                  country_hist[country_historical[i].ID].users_0mo_ago);
+    country_hist[country_historical[i].ID].growth_6mo_ago = 
+      ((country_hist[country_historical[i].ID].users_0mo_ago-country_hist[country_historical[i].ID].users_6mo_ago) /
+                                  country_hist[country_historical[i].ID].users_0mo_ago);
+    country_hist[country_historical[i].ID].growth_12mo_ago = 
+      ((country_hist[country_historical[i].ID].users_0mo_ago-country_hist[country_historical[i].ID].users_12mo_ago) /
+                                  country_hist[country_historical[i].ID].users_0mo_ago);
+
+    country_hist[country_historical[i].ID].growth_1mo_ago_s = 
+      (country_hist[country_historical[i].ID].growth_1mo_ago*100).toFixed(2)+"%";
+    country_hist[country_historical[i].ID].growth_3mo_ago_s = 
+      (country_hist[country_historical[i].ID].growth_3mo_ago*100).toFixed(2)+"%";
+    country_hist[country_historical[i].ID].growth_6mo_ago_s = 
+      (country_hist[country_historical[i].ID].growth_6mo_ago*100).toFixed(2)+"%";
+    country_hist[country_historical[i].ID].growth_12mo_ago_s = 
+      (country_hist[country_historical[i].ID].growth_12mo_ago*100).toFixed(2)+"%";
+
+    country_hist[country_historical[i].ID].pen_0mo_ago_s = 
+      (country_hist[country_historical[i].ID].pen_0mo_ago*100).toFixed(2)+"%";
+    country_hist[country_historical[i].ID].pen_1mo_ago_s = 
+      (country_hist[country_historical[i].ID].pen_1mo_ago*100).toFixed(2)+"%";
+    country_hist[country_historical[i].ID].pen_3mo_ago_s = 
+      (country_hist[country_historical[i].ID].pen_3mo_ago*100).toFixed(2)+"%";
+    country_hist[country_historical[i].ID].pen_6mo_ago_s = 
+      (country_hist[country_historical[i].ID].pen_6mo_ago*100).toFixed(2)+"%";
+    country_hist[country_historical[i].ID].pen_12mo_ago_s = 
+      (country_hist[country_historical[i].ID].pen_12mo_ago*100).toFixed(2)+"%";
+  };
+
+
+  $('select').on('change', function(){
+    var flag_maps = $('.select_maps').val();
+    var flag_metric = $('.select_metric').val();
+    var flag_period = $('.select_period').val();
+
+    if (flag_maps!=="" ){
+      $('.svg_holder').remove();
+      $('.legend_holder').remove();
+
+      if (flag_maps === 'world'){resetMapWorld();}
+      else if (flag_maps === 'europe'){resetMapEurope();}
+      else if (flag_maps === 'middleeast'){resetMapMiddleEast();}
+      else if (flag_maps === 'africa'){resetMapAfrica();}
+      else if (flag_maps === 'southamerica'){resetMapSouthAmerica();}
+      else if (flag_maps === 'southeastasia'){resetMapSouthEastAsia();}
+      else if (flag_maps === 'asia'){resetMapAsia();}
+      else {resetMapWorld();}
+      resetLegend();
+
+      //if trying to calculate pct growth of current month, then do nothing because invalid metric
+      if (flag_metric=="pct_growth" && flag_period=="mo_0"){  genDatamap(".svg_holder",'', flag_maps, '');  }
+      else{  genDatamap(".svg_holder",country_hist, flag_maps, flag_metric, flag_period);  }
+    } 
+  })
+
+
+</script>
+
+  </body>
+</html>

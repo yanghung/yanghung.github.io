@@ -1,0 +1,3656 @@
+var oak = [
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 30610000,
+        "war": 2.22
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 14730000,
+        "war": 8.19
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 1610000,
+        "war": 5.12
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 6452000,
+        "war": 7.44
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 10462500,
+        "war": 12.1
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 8335000,
+        "war": 3.14
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 13735000,
+        "war": 8.2
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 5402400,
+        "war": 1.9
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 19677500,
+        "war": -0.08
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 19150000,
+        "war": 8.41
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 8220000,
+        "war": 5.59
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 16056500,
+        "war": 3.36
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 10070000,
+        "war": 20.27
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 24710000,
+        "war": 9.52
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 10725000,
+        "war": 4.95
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 9417500,
+        "war": 2.83
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 10602500,
+        "war": 1.12
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 15882500,
+        "war": 12.22
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 10485000,
+        "war": 5.08
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 11415000,
+        "war": 2.43
+    }
+]
+
+var sfo = [
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 16206750,
+        "war": 11.13
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 20495250,
+        "war": 8.57
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 30905000,
+        "war": 8.17
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 8409450,
+        "war": 1.77
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 28847000,
+        "war": 19.66
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 20858500,
+        "war": 6.12
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 35183333,
+        "war": 3.12
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 11725000,
+        "war": 1.79
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 25050000,
+        "war": 9.68
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 23946500,
+        "war": 7.17
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 45083333,
+        "war": 6.26
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 18118500,
+        "war": 3
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 7612000,
+        "war": 15.36
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 12666000,
+        "war": 11.72
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 56643333,
+        "war": 7.72
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 24719350,
+        "war": 1.86
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 19706444,
+        "war": 12.43
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 25400000,
+        "war": 7.79
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 70273833,
+        "war": 5.67
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 20544500,
+        "war": 2.58
+    }
+]
+
+var bal=[
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 26900000,
+        "war": -1.01
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 8385000,
+        "war": 5.62
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 20107500,
+        "war": 5.8
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 15920000,
+        "war": 4.17
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 31227750,
+        "war": 7.78
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 21235000,
+        "war": 5.12
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 8370000,
+        "war": 0.71
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 16156500,
+        "war": 1.82
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 29555167,
+        "war": 18.17
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 26183334,
+        "war": 6.62
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 11932333,
+        "war": 2.94
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 15422500,
+        "war": 2.32
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 32000000,
+        "war": 1.49
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 8195000,
+        "war": 5.82
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 7363125,
+        "war": 3.56
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 18411667,
+        "war": 3.83
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 30266167,
+        "war": 2.59
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 20490500,
+        "war": 7.89
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 10823333,
+        "war": 5.71
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 17161000,
+        "war": 4.74
+    }
+]
+var bos=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 37214000,
+        "war": 9.97
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 23099500,
+        "war": 10.75
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 36050000,
+        "war": 15.18
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 12182500,
+        "war": 7.63
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 35413000,
+        "war": 16.12
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 28503500,
+        "war": 15.48
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 49743500,
+        "war": 7.66
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 21997000,
+        "war": 3.12
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 35062500,
+        "war": 16.78
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 39477143,
+        "war": 8.66
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 51088333,
+        "war": 6.64
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 27701000,
+        "war": 6.62
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 51259000,
+        "war": 16.98
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 34116500,
+        "war": 2.58
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 46826333,
+        "war": 12.46
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 16145500,
+        "war": 3.71
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 50969643,
+        "war": 8.67
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 34581808,
+        "war": 2.62
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 41659833,
+        "war": 2.49
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 11469000,
+        "war": 1.53
+    }
+]
+var laa=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 11850000,
+        "war": 19.08
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 37750000,
+        "war": 7.68
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 31140000,
+        "war": 10.16
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 23129000,
+        "war": 4.12
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 13880867,
+        "war": 4.75
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 32780000,
+        "war": 6.62
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 29965000,
+        "war": 10.14
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 21538000,
+        "war": 1.32
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 29152500,
+        "war": 8.15
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 18922500,
+        "war": 14.3
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 48920000,
+        "war": 3.65
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 10911250,
+        "war": 1.24
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 14930667,
+        "war": 13.42
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 41331857,
+        "war": 5.58
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 48115000,
+        "war": 8.1
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 16818000,
+        "war": 1.34
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 33159167,
+        "war": 14.01
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 53625357,
+        "war": 15.95
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 49470000,
+        "war": 3.02
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 14831000,
+        "war": 0.6
+    }
+]
+var ari=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 14843333,
+        "war": 14.56
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 17078667,
+        "war": 4.7
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 31264500,
+        "war": 6
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 9821000,
+        "war": 2.47
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 18333333,
+        "war": 18.24
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 7663833,
+        "war": 9.07
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 13903000,
+        "war": 2.18
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 10387732,
+        "war": -4.33
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 29691000,
+        "war": 14.31
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 16832000,
+        "war": 4.64
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 16209500,
+        "war": 3.76
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 23309500,
+        "war": 4.21
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 21743500,
+        "war": 8.53
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 10084333,
+        "war": 12.38
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 12560000,
+        "war": 3.26
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 8102000,
+        "war": 1.18
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 26244500,
+        "war": 15.94
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 22160333,
+        "war": 7.68
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 12873833,
+        "war": 7.41
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 11799500,
+        "war": 2.9
+    }
+]
+var atl=[
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 26116667,
+        "war": 18.66
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 11050000,
+        "war": 6.59
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 32656167,
+        "war": 5.35
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 12365000,
+        "war": 2.18
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 31810000,
+        "war": 16.87
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 27660833,
+        "war": 7.04
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 19605000,
+        "war": 8.42
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 7738750,
+        "war": 4.45
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 42986667,
+        "war": 10.12
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 12640000,
+        "war": 14.06
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 16982500,
+        "war": 5.33
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 6235500,
+        "war": 4.29
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 35005667,
+        "war": 12.32
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 11010500,
+        "war": 2.45
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 28123000,
+        "war": 5.44
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 8542000,
+        "war": 3.37
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 23866667,
+        "war": 18.53
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 7512500,
+        "war": 0.83
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 50783667,
+        "war": 9.88
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 12325000,
+        "war": 3.18
+    }
+]
+var chw=[
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 25473000,
+        "war": 5.45
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 16745000,
+        "war": 9.36
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 27030000,
+        "war": 8
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 14421500,
+        "war": 2.09
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 25463500,
+        "war": 4.82
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 13040000,
+        "war": 0.15
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 26675000,
+        "war": 9.4
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 20515000,
+        "war": 6.32
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 28923500,
+        "war": 3.64
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 18575000,
+        "war": 5.44
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 42098000,
+        "war": 7.24
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 13825000,
+        "war": 4.69
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 28915000,
+        "war": 10.45
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 16900000,
+        "war": 4.02
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 36200000,
+        "war": 14.46
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 19765000,
+        "war": 7.12
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 25349000,
+        "war": 7.11
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 25730000,
+        "war": 2.2
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 50250000,
+        "war": 13.63
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 10960000,
+        "war": 6.46
+    }
+]
+var chc=[
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 38900000,
+        "war": 6.72
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 36401000,
+        "war": 11.29
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 58852000,
+        "war": 6.72
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 8581000,
+        "war": 2.61
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 34495000,
+        "war": 12.29
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 39633333,
+        "war": 5
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 48200000,
+        "war": 9.59
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 15121500,
+        "war": 0.17
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 10437700,
+        "war": 6.04
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 29797835,
+        "war": 4.89
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 35750000,
+        "war": 4.31
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 12507000,
+        "war": 0.6
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 11387857,
+        "war": 5.15
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 28000000,
+        "war": 5.13
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 42917500,
+        "war": 6.09
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 18724500,
+        "war": -1.74
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 29307000,
+        "war": 13.05
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 40340000,
+        "war": 3.97
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 39675000,
+        "war": 4.46
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 15872000,
+        "war": 4.17
+    }
+]
+var cin=[
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 20976667,
+        "war": 22.79
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 2055000,
+        "war": 12.17
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 26058000,
+        "war": 3.78
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 22620833,
+        "war": 3.04
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 36356667,
+        "war": 11.25
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 8064167,
+        "war": 6.5
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 23282500,
+        "war": 10.95
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 11492833,
+        "war": 5.4
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 24225000,
+        "war": 9.84
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 3872500,
+        "war": 3.58
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 23028000,
+        "war": 1.86
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 20363000,
+        "war": 1.66
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 33502500,
+        "war": 13.2
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 18746667,
+        "war": 11.21
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 36505533,
+        "war": 7.64
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 17050833,
+        "war": 3.24
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 34605667,
+        "war": 17.57
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 6310667,
+        "war": 6.78
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 12867967,
+        "war": -0.04
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 21096833,
+        "war": 1.25
+    }
+]
+var cle=[
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 5920500,
+        "war": 7.7
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 14924167,
+        "war": 2.79
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 8020600,
+        "war": 4.61
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 6911300,
+        "war": 3.88
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 9876600,
+        "war": -0.94
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 7378567,
+        "war": 4.85
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 17325900,
+        "war": 4.94
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 14697900,
+        "war": 2.99
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 21078900,
+        "war": 7.86
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 6008700,
+        "war": 8.9
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 11252100,
+        "war": 4.05
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 21632400,
+        "war": 1.63
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 28501900,
+        "war": 15.78
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 11351900,
+        "war": 7.98
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 22109033,
+        "war": 6.34
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 15747400,
+        "war": 2.98
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 11644700,
+        "war": 8.16
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 7627600,
+        "war": 4.32
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 16988400,
+        "war": -0.45
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 10631100,
+        "war": 1.24
+    }
+]
+var col=[
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 18863000,
+        "war": 5.44
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 22670571,
+        "war": 5.75
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 15141000,
+        "war": 7.1
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 13760500,
+        "war": 4.24
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 31252000,
+        "war": 13.63
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 6719000,
+        "war": 7.24
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 22630533,
+        "war": 9.39
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 9659000,
+        "war": 1.81
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 28956500,
+        "war": 7.68
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 2281571,
+        "war": 9.86
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 26719333,
+        "war": 4.91
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 17854000,
+        "war": 3.13
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 23792000,
+        "war": 0.5
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 19239571,
+        "war": 6.69
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 21724000,
+        "war": 1.58
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 9698000,
+        "war": 4.56
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 28941333,
+        "war": 14.53
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 10019000,
+        "war": 11.3
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 25265000,
+        "war": 6.77
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 17990000,
+        "war": 2.07
+    }
+]
+var det=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 31275000,
+        "war": 9.96
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 33100000,
+        "war": 3.32
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 25872500,
+        "war": 8.73
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 22727500,
+        "war": 2.51
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 47154900,
+        "war": 7.11
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 19243000,
+        "war": 6.3
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 34904166,
+        "war": 10.37
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 10560000,
+        "war": 4.65
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 59925000,
+        "war": 19.08
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 17920000,
+        "war": 6.6
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 44625000,
+        "war": 18.46
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 12844500,
+        "war": 3.26
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 61192000,
+        "war": 10.33
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 2387500,
+        "war": 6.01
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 28699167,
+        "war": 13.59
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 21032000,
+        "war": 3.97
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 47667000,
+        "war": 17.38
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 11288000,
+        "war": 2.6
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 19667667,
+        "war": 9.44
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 14997000,
+        "war": 2.18
+    }
+]
+var hou=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 38787500,
+        "war": 10.72
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 19873500,
+        "war": 9.13
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 21650000,
+        "war": 4.87
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 19124000,
+        "war": -0.8
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 27606500,
+        "war": 4.39
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 24900000,
+        "war": 7.4
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 25916000,
+        "war": 8.64
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 9117500,
+        "war": -0.4
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 11923500,
+        "war": 0.79
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 30723000,
+        "war": 9.07
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 17311500,
+        "war": 3.05
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 7829000,
+        "war": -0.18
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 22844000,
+        "war": 7.2
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 1455000,
+        "war": -1.93
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 14324500,
+        "war": 2.96
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 20469500,
+        "war": 2.93
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 7090500,
+        "war": 8.1
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 2725000,
+        "war": 1.39
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 5940700,
+        "war": 2.01
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 4852300,
+        "war": -0.41
+    }
+]
+var kan=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 11723000,
+        "war": 5.54
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 23083333,
+        "war": 3.2
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 20512500,
+        "war": 11.34
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 16377000,
+        "war": 2.39
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 8248500,
+        "war": 4.18
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 11950000,
+        "war": 2.59
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 25510000,
+        "war": 7.44
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 14171710,
+        "war": 4.65
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 9323250,
+        "war": 6.94
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 16759175,
+        "war": 5.47
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 36587125,
+        "war": 5.98
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 7422175,
+        "war": 4.76
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 4440000,
+        "war": 1.54
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 5564000,
+        "war": 12.46
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 9380500,
+        "war": 4.29
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 8618500,
+        "war": 2.22
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 8062675,
+        "war": 5.09
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 15067475,
+        "war": 5.65
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 16486675,
+        "war": 4.49
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 8486525,
+        "war": 5.91
+    }
+]
+var lad=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 21245000,
+        "war": 17.9
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 39067000,
+        "war": 16.37
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 33529734,
+        "war": 6.43
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 10116250,
+        "war": 2.33
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 26460000,
+        "war": 15.67
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 30800000,
+        "war": 9.5
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 25559333,
+        "war": 5.6
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 12078500,
+        "war": -0.91
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 36260000,
+        "war": 5.58
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 18344500,
+        "war": 13.4
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 31941667,
+        "war": 9.83
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 16767000,
+        "war": -0.11
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 56097143,
+        "war": 13.41
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 58811929,
+        "war": 8.97
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 80750000,
+        "war": 12.24
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 15062000,
+        "war": 2.55
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 26231000,
+        "war": 6.54
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 22050000,
+        "war": 6.97
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 34416667,
+        "war": 8.23
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 10213000,
+        "war": 1.48
+    }
+]
+var mil=[
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 25676000,
+        "war": 5.21
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 16030000,
+        "war": 11.34
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 24195000,
+        "war": 4.3
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 11121000,
+        "war": 1.84
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 27840000,
+        "war": 14.28
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 14282500,
+        "war": 10.2
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 22340000,
+        "war": 0.6
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 15320000,
+        "war": 2.34
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 31789333,
+        "war": 8.23
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 12312500,
+        "war": 10.56
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 37461000,
+        "war": 10.76
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 14863000,
+        "war": 4.22
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 24482000,
+        "war": 11.16
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 14197333,
+        "war": 13.36
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 30891500,
+        "war": 10.16
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 10732500,
+        "war": 2.5
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 16891500,
+        "war": 13.75
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 8037500,
+        "war": 10.88
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 19311500,
+        "war": 10.05
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 32295000,
+        "war": -0.29
+    }
+]
+var min=[
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 43156500,
+        "war": -2.68
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 22725000,
+        "war": 3.66
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 23462500,
+        "war": 5.63
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 20393000,
+        "war": 1.19
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 31256100,
+        "war": 10.96
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 9691167,
+        "war": 4.63
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 2890000,
+        "war": 9.69
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 17400000,
+        "war": 3.61
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 53716667,
+        "war": 10.51
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 7950000,
+        "war": 3.02
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 13237500,
+        "war": 13.62
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 9505000,
+        "war": 3.23
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 44457500,
+        "war": 9.49
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 8487500,
+        "war": 0.03
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 10055000,
+        "war": 1.2
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 8845000,
+        "war": 4.4
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 49612500,
+        "war": 5.65
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 10973500,
+        "war": 8.46
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 22230000,
+        "war": -2.09
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 9740000,
+        "war": 2.74
+    }
+]
+var nyy=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 97830100,
+        "war": 16.97
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 26764000,
+        "war": 7.63
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 42718289,
+        "war": 14.89
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 21215300,
+        "war": 2.66
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 99682900,
+        "war": 13.69
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 13902500,
+        "war": 10.31
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 64482714,
+        "war": 10.72
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 22400275,
+        "war": 3.83
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 86955000,
+        "war": 15.51
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 19379500,
+        "war": 12.88
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 46318614,
+        "war": 10.55
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 29110450,
+        "war": 5.37
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 99838750,
+        "war": 7.97
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 37350000,
+        "war": 4.49
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 58238025,
+        "war": 8.14
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 20550875,
+        "war": 2.29
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 92531300,
+        "war": 19.19
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 26150000,
+        "war": 8.74
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 43227200,
+        "war": 10.19
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 32683925,
+        "war": 4.75
+    }
+]
+var nym=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 43751000,
+        "war": 10.41
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 37446429,
+        "war": 7.3
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 40501500,
+        "war": 5.38
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 28965667,
+        "war": 1.81
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 18889895,
+        "war": 12.38
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 22902318,
+        "war": 3.04
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 35759000,
+        "war": 10.02
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 16466500,
+        "war": 1.54
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 30275000,
+        "war": 10.67
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 35146429,
+        "war": 9.19
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 38802000,
+        "war": 6.75
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 17705667,
+        "war": -0.15
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 29116000,
+        "war": 14.58
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 41695000,
+        "war": 6.33
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 9727000,
+        "war": 4.39
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 18189167,
+        "war": 1.06
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 24555541,
+        "war": 9.19
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 2210614,
+        "war": 3.25
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 9071675,
+        "war": 9.43
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 12720250,
+        "war": 1.2
+    }
+]
+var phi=[
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 51677380,
+        "war": 17.03
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 24666666,
+        "war": 12.78
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 35350000,
+        "war": 6.43
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 28414333,
+        "war": 1.65
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 40720714,
+        "war": 17.38
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 12791667,
+        "war": 12.78
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 30813333,
+        "war": 5.45
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 26203333,
+        "war": 1.84
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 60371714,
+        "war": 6.61
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 2282000,
+        "war": 3.63
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 72500000,
+        "war": 9.71
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 21742000,
+        "war": 1.56
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 55151381,
+        "war": 15.92
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 21255667,
+        "war": 8.08
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 62450000,
+        "war": 12.42
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 24277333,
+        "war": 0.73
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 60168881,
+        "war": 9.92
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 21195000,
+        "war": 5.96
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 70495000,
+        "war": 12.87
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 17095058,
+        "war": 1.88
+    }
+]
+var pit=[
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 14322500,
+        "war": 2.02
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 2374500,
+        "war": 4.62
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 10563000,
+        "war": -1.53
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 8428500,
+        "war": 1.45
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 24521000,
+        "war": 5.7
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 3778000,
+        "war": 2.32
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 9120000,
+        "war": 2.95
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 8882000,
+        "war": -1.57
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 20123500,
+        "war": 4.69
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 1574667,
+        "war": 7.82
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 14673500,
+        "war": -0.72
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 3553000,
+        "war": 1.31
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 17452500,
+        "war": 10.21
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 2109000,
+        "war": 7.28
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 19547500,
+        "war": 4.56
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 9626000,
+        "war": 2.98
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 25255000,
+        "war": 10.59
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 6880000,
+        "war": 9.63
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 24397500,
+        "war": 5.36
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 5526500,
+        "war": 3.63
+    }
+]
+var sdg=[
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 10012200,
+        "war": 17.08
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 3693200,
+        "war": 3.36
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 15506500,
+        "war": 1.7
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 7478900,
+        "war": 2.63
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 6636400,
+        "war": 12.3
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 12841500,
+        "war": 4.16
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 17677400,
+        "war": -0.29
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 4620700,
+        "war": 1.76
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 14636600,
+        "war": 5.73
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 8873200,
+        "war": 7.06
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 6820100,
+        "war": 4.08
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 13873040,
+        "war": 1.22
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 17679000,
+        "war": 7.81
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 17772400,
+        "war": 6.63
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 15473900,
+        "war": 3.87
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 13050700,
+        "war": 0.78
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 20337400,
+        "war": 9.84
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 10751600,
+        "war": 9.51
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 11265300,
+        "war": -1.54
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 10725200,
+        "war": 2.63
+    }
+]
+var sea=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 28397500,
+        "war": 4.3
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 20910000,
+        "war": 9.15
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 35415000,
+        "war": 7.61
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 11550000,
+        "war": 2.47
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 20131000,
+        "war": -2.06
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 31571833,
+        "war": 4.61
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 21909000,
+        "war": 8.18
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 5815000,
+        "war": -0.9
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 10577700,
+        "war": 6.31
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 18575100,
+        "war": 4.42
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 33347143,
+        "war": 5.45
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 5549700,
+        "war": 0.89
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 21686500,
+        "war": 7.69
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 36590833,
+        "war": -1.52
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 17000500,
+        "war": 9.99
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 5837600,
+        "war": 1.12
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 9685700,
+        "war": 3.88
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 34778600,
+        "war": 3.74
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 28504500,
+        "war": 3.34
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 8143600,
+        "war": 1.77
+    }
+]
+var stl=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 34107500,
+        "war": 22.46
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 7750000,
+        "war": 4.35
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 36425000,
+        "war": 4.98
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 6716000,
+        "war": 1.02
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 25087500,
+        "war": 17.66
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 23268000,
+        "war": 12.59
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 36425000,
+        "war": 6.08
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 8640000,
+        "war": -1.47
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 29942000,
+        "war": 17.8
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 30504000,
+        "war": 10.75
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 42044500,
+        "war": 10.64
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 6708000,
+        "war": 1.17
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 22088000,
+        "war": 16.86
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 31022000,
+        "war": 8.9
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 28118000,
+        "war": 11.12
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 8277000,
+        "war": 2.73
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 30408000,
+        "war": 14.83
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 26273000,
+        "war": 13.91
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 36999500,
+        "war": 3.18
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 8030000,
+        "war": -0.6
+    }
+]
+var tam=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 17686050,
+        "war": 19.68
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 11753218,
+        "war": 4.5
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 5336733,
+        "war": 10.15
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 20962867,
+        "war": 2.77
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 20359200,
+        "war": 9.46
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 15038575,
+        "war": 11.84
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 9220233,
+        "war": 10
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 16269600,
+        "war": 4.95
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 23886975,
+        "war": 15.42
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 7126800,
+        "war": 8.2
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 15467700,
+        "war": 4.78
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 8657500,
+        "war": 3.45
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 14586575,
+        "war": 11.05
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 5669800,
+        "war": 7.75
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 9667233,
+        "war": 8.95
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 6727700,
+        "war": 1.56
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 16726000,
+        "war": 6.85
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 13116275,
+        "war": 10.81
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 16189500,
+        "war": 9.37
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 11634200,
+        "war": 6.17
+    }
+]
+var tex=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 28018510,
+        "war": 8.54
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 4437890,
+        "war": 6.94
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 27901940,
+        "war": 7.71
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 7246040,
+        "war": 2.72
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 23320130,
+        "war": 5.36
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 4717670,
+        "war": 12.86
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 14599280,
+        "war": 11.64
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 9547190,
+        "war": 5.11
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 45292700,
+        "war": 17.41
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 22026000,
+        "war": 7.94
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 18898600,
+        "war": 7.29
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 16626800,
+        "war": 4.18
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 31233260,
+        "war": 19.28
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 17206000,
+        "war": 7.68
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 11290790,
+        "war": 13.11
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 17153320,
+        "war": 2.92
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 38716100,
+        "war": 15.39
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 26859300,
+        "war": 12.87
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 24702000,
+        "war": 9.3
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 19560500,
+        "war": 4.75
+    }
+]
+var tor=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 29115000,
+        "war": 13.22
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 13888900,
+        "war": 3.3
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 17299300,
+        "war": 11.69
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 19898700,
+        "war": 4.08
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 24575700,
+        "war": 8.04
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 18948300,
+        "war": 8.02
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 2906300,
+        "war": 11.12
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 13989500,
+        "war": 4.49
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 22497100,
+        "war": 6.26
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 19935900,
+        "war": 3.76
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 12496300,
+        "war": 1.31
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 16217400,
+        "war": 2.25
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 17027800,
+        "war": 5.6
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 17085800,
+        "war": 7.77
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 7293200,
+        "war": 6.13
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 17961000,
+        "war": 3.84
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 32505600,
+        "war": 10.55
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 29175000,
+        "war": 8.62
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 50959000,
+        "war": 6.07
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 14148500,
+        "war": 4.98
+    }
+]
+var was=[
+    {
+        "group": "Infielders",
+        "year": 2009,
+        "salary": 28985500,
+        "war": 13.94
+    },
+    {
+        "group": "Outfielders",
+        "year": 2009,
+        "salary": 13729000,
+        "war": 7.88
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2009,
+        "salary": 6224000,
+        "war": -2.65
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2009,
+        "salary": 4970000,
+        "war": 0.06
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2010,
+        "salary": 31700000,
+        "war": 11.88
+    },
+    {
+        "group": "Outfielders",
+        "year": 2010,
+        "salary": 5836500,
+        "war": 6.03
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2010,
+        "salary": 14347000,
+        "war": 1.91
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2010,
+        "salary": 8076000,
+        "war": 0.3
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2011,
+        "salary": 24096500,
+        "war": 15.27
+    },
+    {
+        "group": "Outfielders",
+        "year": 2011,
+        "salary": 12771429,
+        "war": 4.82
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2011,
+        "salary": 21140000,
+        "war": 3.96
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2011,
+        "salary": 6035000,
+        "war": 2.63
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2013,
+        "salary": 37215000,
+        "war": 10.46
+    },
+    {
+        "group": "Outfielders",
+        "year": 2013,
+        "salary": 25026929,
+        "war": 8.89
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2013,
+        "salary": 30937500,
+        "war": 9.66
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2013,
+        "salary": 25080500,
+        "war": 1.77
+    }
+,
+    {
+        "group": "Infielders",
+        "year": 2012,
+        "salary": 22905750,
+        "war": 13.16
+    },
+    {
+        "group": "Outfielders",
+        "year": 2012,
+        "salary": 21844929,
+        "war": 9.07
+    },
+    {
+        "group": "Starting Pitchers",
+        "year": 2012,
+        "salary": 31010000,
+        "war": 14.05
+    },
+    {
+        "group": "Relief Pitchers",
+        "year": 2012,
+        "salary": 9905750,
+        "war": 3.96
+    }
+]

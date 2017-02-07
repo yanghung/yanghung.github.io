@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Yang Hung</title>
+    <meta charset="utf-8">
+    <!-- meta name="viewport" content="width=device-width, initial-scale=1.0" -->
+    <!-- link href="css/bootstrap.css" rel="stylesheet" media="screen" -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href="../css/stylesheet.css" rel="stylesheet">
+    <style type="text/css">
+    
+    text {font: 12px sans-serif;}
+
+    .xaxis path, .yAxisSeparated path, .yAxisStacked path { display: none; }
+
+    .xaxis line, .yAxisSeparated line, .yAxisStacked line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .group-label {
+      font-weight: bold;
+      text-anchor: end;
+    }
+    .tick.major{ fill:#000; }
+    svg{ cursor:pointer; }
+
+
+    .select_team1 option:first-child,.select_team2 option:first-child  {  display:none;  }
+    .select_team1{ margin-right: 180px; }
+    .select_team1, .select_team2 { background: url(../img/black_down_triangle.png) no-repeat right #e0e0e0; }
+
+    select {
+       background: transparent;
+       width: 230px;
+       font-size: 13px;
+       border: 1px solid #7F9DB9;
+       border-radius: 4px;         
+       -webkit-appearance: none;
+       -moz-appearance:none;
+       appearance:none;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header_left">
+        <h1>YANG HUNG</h1>
+        <h2>My goal is to <span style="color:#238E23">democratize data</span> for all to enjoy</h2>
+      </div><!--header_left-->
+
+      <div class="header_right">
+        <ul class="nav">
+          <li>
+            <a href="http://www.linkedin.com/in/yanghung" target="_blank">
+              <img src="../img/icon-linkedin.png" alt="LinkedIn">
+              <div class="transition-icon"></div>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:yanghung@gmail.com?Subject=Hi%20Yang%20Hung">
+              <img src="../img/icon-email.png" alt="email">
+              <div class="transition-icon"></div>
+            </a>
+          </li>
+          <li>
+            <a href="assets/Yang_Hung_Resume.pdf" target="_blank">
+              <img src="../img/icon-resume.png" alt="Resume">
+              <div class="transition-icon"></div>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.yanghung.com">
+              <img src="../img/icon-home.png" alt="Home">
+              <div class="transition-icon"></div>
+            </a>
+          </li>
+        </ul>
+      </div><!--header_right-->
+
+      
+      <div class="project-container">
+        <p>&nbsp;</p>
+        <p>Inspired by the Michael Lewis bestseller <a href="http://en.wikipedia.org/wiki/Moneyball:_The_Art_of_Winning_an_Unfair_Game" target="_blank">Moneyball</a>, the interactive bar charts below let you compare two team's effectiveness in spending its money over the years at different positions.<br><br>To generate the charts, please select your two favorite teams that you want to compare metrics against. After the charts are generated, you can click anywhere on the charts to toggle between "stacked" and "separated" bar charts, which lets you see how each team allocates its money. <br><br>The color shading of each bar indicates how well the money was spent at each position. We use the <a href="http://en.wikipedia.org/wiki/Wins_Above_Replacement" target="_blank">Wins Above Replacement (WAR)</a> statistic as the measurement of player effectiveness, which lets us compare pitchers and batters together to see how many wins they add/subtract to a team.<br><br><br>Data source: <a href="http://www.baseballprospectus.com/compensation/" target="_blank">Baseball Prospectus</a><br><br>Tools used: JavaScript, jQuery, d3.js</p>
+        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+        <select class="select_team1">
+          <option value="">Choose a Team</option>
+          <optgroup label="American League East">
+            <option value="bal">Baltimore Orioles</option>
+            <option value="bos">Boston Red Sox</option>
+            <option value="nyy">New York Yankees</option>
+            <option value="tam">Tampa Bay Rays</option>
+            <option value="tor">Toronto Blue Jays</option>
+          </optgroup>
+          <optgroup label="American League Central">
+            <option value="chw">Chicago White Sox</option>
+            <option value="cle">Cleveland Indians</option>
+            <option value="det">Detroit Tigers</option>
+            <option value="kan">Kansas City Royals</option>
+            <option value="min">Minnesota Twins</option>
+          </optgroup>
+          <optgroup label="American League West">
+            <option value="hou">Houston Astros</option>
+            <option value="laa">Los Angeles Angels</option>
+            <option value="oak">Oakland Athletics</option>
+            <option value="sea">Seattle Mariners</option>
+            <option value="tex">Texas Rangers</option>
+          </optgroup>
+          <optgroup label="National League East">
+            <option value="atl">Atlanta Braves</option>
+
+            <option value="nym">New York Mets</option>
+            <option value="phi">Philadelphia Phillies</option>
+            <option value="was">Washington Nationals</option>
+          </optgroup>
+          <optgroup label="National League Central">
+            <option value="chc">Chicago Cubs</option>
+            <option value="cin">Cincinnati Reds</option>
+            <option value="mil">Milwaukee Brewers</option>
+            <option value="pit">Pittsburgh Pirates</option>
+            <option value="stl">St. Louis Cardinals</option>
+          </optgroup>
+          <optgroup label="National League West">
+            <option value="ari">Arizona Diamondbacks</option>
+            <option value="col">Colorado Rockies</option>
+            <option value="lad">Los Angeles Dodgers</option>
+            <option value="sdg">San Diego Padres</option>
+            <option value="sfo">San Francisco Giants</option>
+          </optgroup>
+        </select>
+        <select class="select_team2">
+          <option value="">Choose a Team</option>
+          <optgroup label="American League East">
+            <option value="bal">Baltimore Orioles</option>
+            <option value="bos">Boston Red Sox</option>
+            <option value="nyy">New York Yankees</option>
+            <option value="tam">Tampa Bay Rays</option>
+            <option value="tor">Toronto Blue Jays</option>
+          </optgroup>
+          <optgroup label="American League Central">
+            <option value="chw">Chicago White Sox</option>
+            <option value="cle">Cleveland Indians</option>
+            <option value="det">Detroit Tigers</option>
+            <option value="kan">Kansas City Royals</option>
+            <option value="min">Minnesota Twins</option>
+          </optgroup>
+          <optgroup label="American League West">
+            <option value="hou">Houston Astros</option>
+            <option value="laa">Los Angeles Angels</option>
+            <option value="oak">Oakland Athletics</option>
+            <option value="sea">Seattle Mariners</option>
+            <option value="tex">Texas Rangers</option>
+          </optgroup>
+          <optgroup label="National League East">
+            <option value="atl">Atlanta Braves</option>
+
+            <option value="nym">New York Mets</option>
+            <option value="phi">Philadelphia Phillies</option>
+            <option value="was">Washington Nationals</option>
+          </optgroup>
+          <optgroup label="National League Central">
+            <option value="chc">Chicago Cubs</option>
+            <option value="cin">Cincinnati Reds</option>
+            <option value="mil">Milwaukee Brewers</option>
+            <option value="pit">Pittsburgh Pirates</option>
+            <option value="stl">St. Louis Cardinals</option>
+          </optgroup>
+          <optgroup label="National League West">
+            <option value="ari">Arizona Diamondbacks</option>
+            <option value="col">Colorado Rockies</option>
+            <option value="lad">Los Angeles Dodgers</option>
+            <option value="sdg">San Diego Padres</option>
+            <option value="sfo">San Francisco Giants</option>
+          </optgroup>
+        </select>
+        <div class="svg_left_holder" style="height: 550px; width: 410px; float:left"></div><!--svg_left_holder-->
+        <div class="svg_right_holder" style="height: 550px; width: 410px; float:left"></div><!--svg_left_holder-->
+        <div class="legend_holder" style="height: 100px; width: 820px; float:left"></div><!--legend_holder-->
+        <div class="clear"></div>
+      </div><!--project-container-->
+    </div><!--container-->
+
+    <script src="../js/d3.v3.min.js"></script>    <!--d3.js library-->
+    <script src="../js/jquery.min.js"></script>   <!--jQuery library-->
+    <script src="moneyball.js"></script>          <!--functions to generate bar charts-->
+    <script src="moneyball_data.json"></script>   <!--data-->
+
+    <script>
+      var selected1 = $( ".select_team1 option:selected" ).val();
+      var selected2 = $( ".select_team2 option:selected" ).val();
+
+
+      //callbacks for when dropdown options are selected
+      $( ".select_team1" ).change(function() {
+        selected1 = $( ".select_team1 option:selected" ).val();
+        var flag = (selected1!=="" && selected2!=="" )  ?  1 : 0;
+        if (flag==1) {  createBothChart(selected1,selected2); genLegend();}
+      });
+      $( ".select_team2" ).change(function() {
+        selected2 = $( ".select_team2 option:selected" ).val();
+        var flag = (selected1!=="" && selected2!=="" )  ?  1 : 0;
+        if (flag==1) {  createBothChart(selected1,selected2); genLegend();}
+      });
+
+
+      function createBothChart(team1, team2){
+        $(".svg_left_holder").empty();
+        $(".svg_right_holder").empty();
+        $(".legend_holder").empty();
+        createChart(eval(team1),".svg_left_holder", "svg_left", "group_left", eval(team2));
+        createChart(eval(team2),".svg_right_holder", "svg_right", "group_right", eval(team1));
+      }
+
+    </script>
+
+
+    <footer>
+      <div class="container">
+        <p>&copy; www.yanghung.com 2014</p>
+      </div>
+    </footer>
+    <!--script src="http://code.jquery.com/jquery.js"></script-->
+
+  </body>
+</html>
