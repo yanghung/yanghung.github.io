@@ -148,7 +148,7 @@ var islandChart = dc.pieChart("#dc-island-chart");
 var timeChart = dc.lineChart("#dc-time-chart");
 
 // load data from a csv file
-d3.csv("quake-later3.csv", function (data) {
+d3.csv("https://gist.githubusercontent.com/yanghung/4365f3dbb1e0c16a6c89c001a92726ee/raw/41e230336df1a0fe56a389b25777909b3d327bf5/quake-later3.csv", function (data) {
 
   // format our data
   var dtgFormat = d3.time.format("%Y-%m-%dT%H:%M:%S");
