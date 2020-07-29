@@ -107,6 +107,26 @@
     </div>
   </div>
 
+
+  <div class='row'>
+    <div class="eight wide column" id="order_size_chart">
+      <h3>Order Size Chart</h3>
+    </div>
+    <div class="eight wide column">
+      <h3>Table</h3>
+      <table class="ui celled striped table" id="order_size_table">
+        <thead>
+            <tr>
+              <th>geo</th>
+              <th>records</th>
+              <th>overall accuracy</th>
+              <th>total market size</th>
+            </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
   <div class='row'>
     <div class="sixteen wide column">
       <h3>Raw Data</h3>
@@ -139,6 +159,7 @@
     const div_metrics_per_intent = 'metrics_per_intent'; //maps to the "id" field in your html code up top
     const div_raw_data='raw_data';
     const div_geo_chart='geo_chart';
+    const div_order_size_chart='order_size_chart'
     const div_geo_table='geo_table';
 
 
@@ -181,6 +202,7 @@
         var dimGeo = crossData.dimension(function(d) {
           return d.geo;
         });
+        const dimFinalOrderSize = crossData.dimension(d => d.final_order_size);
 
 
         /**
@@ -191,8 +213,11 @@
         var metricsPredict = reducerMetrics(dimPredict);
         var metricsActual = reducerMetrics(dimActual);
         var metricsGeo = reducerMetrics(dimGeo);
+        const metricsFinalOrderSize = reducerMetrics(dimFinalOrderSize);
+        const groupFinalOrderSize = dimFinalOrderSize.group();
         var metricsPredictTemp = metricsPredict.all();
         var metricsActualTemp = metricsActual.all();
+
 
         function hackyJoinTwoReducers(mainReducer, reducer1, reducer2) {
           var newReducer=mainReducer;
@@ -208,6 +233,16 @@
         /**
          * Define settings for your charts and tables
          */
+        const settings_order_size_chart = {
+          chart_type: 'bar_chart'
+          , chart_id: div_order_size_chart
+          // , width: document.getElementById(div_geo_chart).offsetWidth
+          // , height: 300
+          , dimension: dimFinalOrderSize
+          , group: groupFinalOrderSize
+          , x_axis: d3.scaleLinear().domain([0, 25])
+          , bool_elastic_y: true
+        }
         const settings_geo_chart = {
           chart_type: 'pie_chart'
           , chart_id: div_geo_chart
@@ -325,20 +360,20 @@
         createChartSingleSeries(settings_metrics_per_intent);
         createChartSingleSeries(settings_geo_chart);
         createChartSingleSeries(settings_geo_table);
+        createChartSingleSeries(settings_order_size_chart);
         var dataTableStats = $('#'+div_raw_data).dataTable(settingsRawData);
 
 
         // Listener on filter options
         window[div_geo_chart].on('filtered', function(chart, filter){
-          //hacky way to join the two reduced objects
-          hackyJoinTwoReducers(metricsPredict, metricsPredictTemp, metricsActualTemp)
-
-
+          hackyJoinTwoReducers(metricsPredict, metricsPredictTemp, metricsActualTemp) //hacky way to join the two reduced objects
           refresh_table(data, dataTableStats, 'geo', chart._filters);
         });
+
         dc.renderAll(); //render all
 
       })
+
       .catch(function(error){
          console.log(error);
     });
