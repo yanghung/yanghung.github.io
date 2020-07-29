@@ -13,7 +13,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-  <script src="https://raw.githack.com/yanghung/helper_functions/master/dataviz_helper.js"></script>
+  <script src="https://rawcdn.githack.com/yanghung/helper_functions/ef167ad972cc58aaee6ce37a91ce342ba96bb4ee/dataviz_helper.js"></script>
+  <!-- https://rawcdn.githack.com/yanghung/helper_functions/ef167ad972cc58aaee6ce37a91ce342ba96bb4ee/dataviz_helper.js -->
 
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/dc@4/dist/style/dc.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css" />
@@ -39,8 +40,8 @@
           </div>
           <div class="content active">
             <p class="transition visible">Click on the Geo Chart (donut) to filter by specific geography</p>
-            <p class="transition visible">Click on the X Chart (bar) to filter by Day of the Week</p>
-            <p class="transition visible">Look at the Metrics per Intent table to see how metrics update</p>
+            <p class="transition visible">Filter the Order Size Histogram to filter by Order Size (x axis)</p>
+            <p class="transition visible">Look at the Metrics per Intent table to see how our metrics change</p>
             <p class="transition visible">Look at the Raw Data table to see the raw records after filtering</p>
           </div>
 
@@ -48,7 +49,9 @@
             What do the metrics mean?
           </div>
           <div class="content">
-            <p class="transition hidden"><em><strong>Metric Name</strong></em>: Metric Defn</p>
+            <p class="transition hidden"><em><strong>Precision</strong></em>: The % predictions of an intent that are correct</p>
+            <p class="transition hidden"><em><strong>Recall</strong></em>: The % of intents that are correctly predicted</p>
+            <p class="transition hidden"><em><strong>F1 Score</strong></em>: The Harmonic Mean between Precision and Recall</p>
           </div>
 
           <div class="title" style="font-weight: bold;" ><i class="dropdown icon"></i>
@@ -109,22 +112,11 @@
 
 
   <div class='row'>
-    <div class="eight wide column" id="order_size_chart">
-      <h3>Order Size Chart</h3>
+    <div class="sixteen wide column" id="order_size_chart">
+      <h3>Order Size Histogram</h3>
+      <a class="reset" href="javascript:window[div_order_size_chart].filterAll();dc.redrawAll();" style="display: none;">reset</a>
     </div>
-    <div class="eight wide column">
-      <h3>Table</h3>
-      <table class="ui celled striped table" id="order_size_table">
-        <thead>
-            <tr>
-              <th>geo</th>
-              <th>records</th>
-              <th>overall accuracy</th>
-              <th>total market size</th>
-            </tr>
-        </thead>
-      </table>
-    </div>
+
   </div>
 
   <div class='row'>
@@ -240,8 +232,10 @@
           // , height: 300
           , dimension: dimFinalOrderSize
           , group: groupFinalOrderSize
-          , x_axis: d3.scaleLinear().domain([0, 25])
+          , x_axis: d3.scaleLinear().domain([0, 12])
           , bool_elastic_y: true
+          , bool_center_bar: true
+          , gap: 1
         }
         const settings_geo_chart = {
           chart_type: 'pie_chart'
@@ -367,7 +361,21 @@
         // Listener on filter options
         window[div_geo_chart].on('filtered', function(chart, filter){
           hackyJoinTwoReducers(metricsPredict, metricsPredictTemp, metricsActualTemp) //hacky way to join the two reduced objects
-          refresh_table(data, dataTableStats, 'geo', chart._filters);
+          var newDataFiltered = refresh_table_geo(data, dataTableStats, 'geo', chart._filters);
+          dc.events.trigger(function () {
+            dataTableStats.fnClearTable();
+            dataTableStats.fnAddData(newDataFiltered);
+            dataTableStats.fnDraw();
+          });
+        });
+        window[div_order_size_chart].on('filtered', function(chart, filter){
+          hackyJoinTwoReducers(metricsPredict, metricsPredictTemp, metricsActualTemp) //hacky way to join the two reduced objects
+          var newDataFiltered = refresh_table_order(data, dataTableStats, 'final_order_size', chart._filters);
+          // dc.events.trigger(function () {
+          //   dataTableStats.fnClearTable();
+          //   dataTableStats.fnAddData(newDataFiltered);
+          //   dataTableStats.fnDraw();
+          // });
         });
 
         dc.renderAll(); //render all
@@ -400,7 +408,7 @@
            ++agg.count;
            agg.flag_true_positive += d.flag_true_positive;
            agg.metric_total_mkt_size += d.final_order_size;
-           agg.metric_div = agg.flag_true_positive / (agg.count+0.000000000001);
+           agg.metric_div = agg.flag_true_positive / (agg.count+0.0000000000000001);
            return agg;
          },
          // callback for when data is removed from the current filter results
@@ -408,7 +416,7 @@
            --agg.count;
            agg.flag_true_positive -= d.flag_true_positive;
            agg.metric_total_mkt_size -= d.final_order_size;
-           agg.metric_div = agg.flag_true_positive / (agg.count+0.000000000001);
+           agg.metric_div = agg.flag_true_positive / (agg.count+0.0000000000000001);
            return agg;
          },
          // initialize agg metrics
@@ -426,8 +434,10 @@
 
 
      /* helpder function to refresh table after filters change */
-     function refresh_table(data, dataTable, filterField, filterArray) {
+     function refresh_table_geo(data, dataTable, filterField, filterArray) {
        var newData = data;
+       console.log(filterArray)
+       console.log(filterField)
        //need a "hacky" way to create a new array that only has the elements of "metric" with count>0 (i.e. remove filtered out elements)
        var newDataFiltered = [];
        for (i=0; i<newData.length; i++) {
@@ -440,12 +450,43 @@
            newDataFiltered = newDataFiltered.concat(newData[i]);
          }
        }
+       return newDataFiltered;
 
-       dc.events.trigger(function () {
-         dataTable.fnClearTable();
-         dataTable.fnAddData(newDataFiltered);
-         dataTable.fnDraw();
-       });
+       // dc.events.trigger(function () {
+       //   dataTable.fnClearTable();
+       //   dataTable.fnAddData(newDataFiltered);
+       //   dataTable.fnDraw();
+       // });
+     };
+
+     function refresh_table_order(data, dataTable, filterField, filterArray) {
+       var newData = data;
+       console.log(filterArray)
+       console.log(filterField)
+       //need a "hacky" way to create a new array that only has the elements of "metric" with count>0 (i.e. remove filtered out elements)
+       var newDataFiltered = [];
+       for (i=0; i<newData.length; i++) {
+
+
+
+         if (filterArray.length>0) {
+           if (filterArray[0][0] <= newData[i][filterField] && newData[i][filterField] <= filterArray[0][1]){
+             newDataFiltered = newDataFiltered.concat(newData[i]);
+           }
+         } else {
+           newDataFiltered = newDataFiltered.concat(newData[i]);
+         }
+
+
+       }
+
+       return newDataFiltered;
+
+       // dc.events.trigger(function () {
+       //   dataTable.fnClearTable();
+       //   dataTable.fnAddData(newDataFiltered);
+       //   dataTable.fnDraw();
+       // });
      };
 
   </script>
