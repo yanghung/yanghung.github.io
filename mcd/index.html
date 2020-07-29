@@ -41,7 +41,7 @@
             <p class="transition visible">Click on the Geo Chart (donut) to filter by specific geography</p>
             <p class="transition visible">Click on the X Chart (bar) to filter by Day of the Week</p>
             <p class="transition visible">Look at the Metrics per Intent table to see how metrics update</p>
-            <p class="transition visible">Look at the Raw Data table to see the raw records</p>
+            <p class="transition visible">Look at the Raw Data table to see the raw records after filtering</p>
           </div>
 
           <div class="title" style="font-weight: bold;" ><i class="dropdown icon"></i>
@@ -93,12 +93,14 @@
       <h3>Geo Chart</h3>
     </div>
     <div class="eight wide column">
-      <h3>Geo Accuracy Table</h3>
+      <h3>Geo Metrics Table</h3>
       <table class="ui celled striped table" id="geo_table">
         <thead>
             <tr>
               <th>geo</th>
-              <th>accuracy</th>
+              <th>records</th>
+              <th>overall accuracy</th>
+              <th>total market size</th>
             </tr>
         </thead>
       </table>
@@ -107,9 +109,7 @@
 
   <div class='row'>
     <div class="sixteen wide column">
-      <h3>Raw Data
-        <!-- <span> <a class="reset" href="javascript:magnitudeChart.filterAll();dc.redrawAll();" style="display: none;"> reset </a> </span> -->
-      </h3>
+      <h3>Raw Data</h3>
       <table class="ui celled striped table" id="raw_data">
         <thead>
             <tr>
@@ -142,7 +142,8 @@
     const div_geo_table='geo_table';
 
 
-    const csv_link = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSy_Ll07WrfY5ZDjO5jY_pjN287tKVoAY6ll3vGCYcOhWlbYg_nkv591W7R1XZ2H1tKHTi7UteJHt5i/pub?gid=1936072458&single=true&output=csv';
+    // const csv_link = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSy_Ll07WrfY5ZDjO5jY_pjN287tKVoAY6ll3vGCYcOhWlbYg_nkv591W7R1XZ2H1tKHTi7UteJHt5i/pub?gid=1936072458&single=true&output=csv';
+    const csv_link='example_nlu.csv'
     d3.csv(csv_link).then(data => {
         // data is now whole data set
         // draw chart in here!
@@ -202,12 +203,6 @@
           return newReducer;
         }
         hackyJoinTwoReducers(metricsPredict, metricsPredictTemp, metricsActualTemp)
-        // //hacky way to join the two reduced objects
-        // for (i=0; i<metricsPredict.size(); i++) {
-        //   // console.log(metricsPredict.all());
-        //   metricsPredictTemp[i].value.precision_denom = metricsPredictTemp[i].value.count
-        //   metricsPredictTemp[i].value.recall_denom = metricsActualTemp[i].value.count
-        // }
 
 
         /**
@@ -241,8 +236,15 @@
               return d.key
             }
             , function(d) {
+              return numberFormat_no_decimal(d.value.count)
+            }
+            , function(d) {
               return percentFormat(d.value.metric_div)
             }
+            , function(d) {
+              return currencyFormat(d.value.metric_total_mkt_size)
+            }
+
           ]
           , sort_logic: function(d) {
             return -(d.key.toLowerCase().charCodeAt(0) - 96) //custom implementation to sort alphabetically
@@ -362,6 +364,7 @@
          (agg, d) => {
            ++agg.count;
            agg.flag_true_positive += d.flag_true_positive;
+           agg.metric_total_mkt_size += d.final_order_size;
            agg.metric_div = agg.flag_true_positive / (agg.count+0.000000000001);
            return agg;
          },
@@ -369,6 +372,7 @@
          (agg, d) => {
            --agg.count;
            agg.flag_true_positive -= d.flag_true_positive;
+           agg.metric_total_mkt_size -= d.final_order_size;
            agg.metric_div = agg.flag_true_positive / (agg.count+0.000000000001);
            return agg;
          },
@@ -377,6 +381,7 @@
              count: 0
              , flag_true_positive:0
              , metric_div:0
+             , metric_total_mkt_size:0
          })
        )
 
