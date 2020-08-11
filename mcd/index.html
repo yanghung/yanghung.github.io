@@ -16,8 +16,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-  <script src="https://rawcdn.githack.com/yanghung/helper_functions/ef167ad972cc58aaee6ce37a91ce342ba96bb4ee/dataviz_helper.js"></script>
-  <!-- https://rawcdn.githack.com/yanghung/helper_functions/ef167ad972cc58aaee6ce37a91ce342ba96bb4ee/dataviz_helper.js -->
+  <script src="https://rawcdn.githack.com/yanghung/helper_functions/33d69525a9dc398cf66dcbc601b39728ee294d82/dataviz_helper.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/dc@4/dist/style/dc.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css" />
@@ -209,7 +208,7 @@
         var metricsActual = reducerMetrics(dimActual);
         var metricsGeo = reducerMetrics(dimGeo);
         const metricsFinalOrderSize = reducerMetrics(dimFinalOrderSize);
-        const groupFinalOrderSize = dimFinalOrderSize.group();
+        const groupFinalOrderSize = dimFinalOrderSize.group(function (v) { return Math.floor(v); }); //need to do this so that the histogram groups correctly
         var metricsPredictTemp = metricsPredict.all();
         var metricsActualTemp = metricsActual.all();
 
@@ -236,9 +235,13 @@
           , dimension: dimFinalOrderSize
           , group: groupFinalOrderSize
           , x_axis: d3.scaleLinear().domain([0, 12])
+          , x_axis_label: 'Order Size'
+          , x_axis_format: formatCurrencyRange
+          , y_axis_label: 'Counts'
+          , y_axis_format: numberFormat_no_decimal
           , bool_elastic_y: true
           , bool_center_bar: true
-          , gap: 1
+          , gap: 5
         }
         const settings_geo_chart = {
           chart_type: 'pie_chart'
